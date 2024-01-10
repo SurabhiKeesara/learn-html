@@ -8,12 +8,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // GET endpoint for handling login
 app.get('/login', (req, res) => {
-    const username = req.query.username;
+    const username = req.query.username; // name attribute of input tag: "username"
     const password = req.query.password;
 
     // Here, you can perform authentication logic
     // For simplicity, let's just send back a response with the received data
-    res.json({ username, password });
+    res.json({ username, password }); // response type = JSON
 });
 
 app.listen(port, () => {
